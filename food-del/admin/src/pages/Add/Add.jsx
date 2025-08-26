@@ -4,13 +4,13 @@ import { assets, url } from '../../assets/assets';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const Add = () => {
+const Add = ({url}) => {
 
-
+  
     const [image, setImage] = useState(false);
     const [data, setData] = useState({
         name: "",
-        description: "",
+        description: "",     
         price: "",
         category: "Salad"
     });
@@ -50,6 +50,7 @@ const Add = () => {
         const value = event.target.value;
         setData(data => ({ ...data, [name]: value }))
     }
+    
 
     return (
         <div className='add'>

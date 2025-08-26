@@ -7,16 +7,16 @@
 }
 body{
   min-height: 100vh;
-  background-color: #FCFCFC;
+  background-color: #f1e6e6;
 }
 a{
   text-decoration: none;
-  color: inherit;
+  color: blueviolet;
 }
 hr{
   border: none;
   height: 1px;
-  background-color: #A9A9A9;
+  background-color: #dde1e5;
 }
 .app-content{
   display: flex;

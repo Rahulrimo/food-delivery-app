@@ -22,12 +22,17 @@ connectDB()
 // api endpoints
 app.use("/api/user", userRouter)
 app.use("/api/food", foodRouter)
+
 app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
+
 
 app.get("/", (req, res) => {
     res.send("API Working")
   });
 
-app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
+app.listen(port, "0.0.0.0", () => {
+  console.log(`✅ Server started on http://localhost:${port}`);
+  console.log(`🌐 Network access: http://YOUR_LOCAL_IP:${port}`);
+});
